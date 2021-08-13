@@ -1,0 +1,17 @@
+.title {
+    color: red;
+}
+
+.primary {
+    color: aquamarine;
+}
+
+.secondary {
+    color: blueviolet;
+}
+
+.title-div {
+    background-color: cadetblue;
+    padding: 2rem;
+    text-align: center;
+}

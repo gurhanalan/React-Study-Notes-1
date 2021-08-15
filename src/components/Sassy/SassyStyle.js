@@ -1,3 +1,5 @@
+import "../../sass/main.scss";
+
 const SassyStyle = () => {
     return (
         <div className="sassy-div">

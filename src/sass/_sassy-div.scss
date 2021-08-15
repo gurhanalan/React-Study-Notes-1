@@ -1,0 +1,37 @@
+.sassy-div {
+    padding: 1rem;
+    background-color: lightblue;
+    text-align: center;
+    h1 {
+        color: lightcoral;
+    }
+
+    p {
+        color: lightpink;
+    }
+
+    &__btns {
+        display: flex;
+        gap: 2rem;
+        justify-content: center;
+
+        &__btn {
+            border: none;
+            padding: 1rem 2rem;
+            outline: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.253);
+            }
+
+            &--left {
+                background-color: lightyellow;
+            }
+            &--right {
+                background-color: rgb(192, 192, 28);
+            }
+        }
+    }
+}

@@ -6,6 +6,7 @@ import SassyStyle from "./components/Sassy/SassyStyle";
 
 import "./app.css";
 import styles from "./app.module.css";
+import ModuleBtn from "./components/moduleCss/ModuleBtn";
 
 function App() {
     return (
@@ -22,6 +23,9 @@ function App() {
             <h3 className={styles["success__BEM__notation--1"]}>
                 Module Style Success with Bracket Notation
             </h3>
+
+            <ModuleBtn btnClass="primary" btnName="Module" />
+            <ModuleBtn btnClass="secondary" btnName="CSS" />
         </div>
     );
 }

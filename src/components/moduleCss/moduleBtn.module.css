@@ -1,0 +1,9 @@
+.primary {
+    color: rgb(84, 30, 210);
+    padding: 1rem 2rem;
+}
+
+.secondary {
+    color: crimson;
+    padding: 1rem 2rem;
+}

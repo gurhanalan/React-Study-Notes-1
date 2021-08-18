@@ -7,6 +7,7 @@ import SassyStyle from "./components/Sassy/SassyStyle";
 import "./app.css";
 import styles from "./app.module.css";
 import ModuleBtn from "./components/moduleCss/ModuleBtn";
+import EventBind from "./components/eventBinding/EventBind";
 
 function App() {
     return (
@@ -26,6 +27,9 @@ function App() {
 
             <ModuleBtn btnClass="primary" btnName="Module" />
             <ModuleBtn btnClass="secondary" btnName="CSS" />
+
+            <h1>Events in React</h1>
+            <EventBind />
         </div>
     );
 }

@@ -9,6 +9,7 @@ class EventBind extends Component {
 
         this.handleClick = this.handleClick.bind(this);
     }
+
     handleClick() {
         this.setState({ message: "Goodbye!" });
         console.log("this: ", this);
@@ -19,6 +20,11 @@ class EventBind extends Component {
         console.log("this: ", this);
     };
 
+    handleClick3(name) {
+        this.setState({ message: `Goodbye! ${name}` });
+        console.log("this: ", this);
+    }
+
     render() {
         return (
             <div>
@@ -26,7 +32,8 @@ class EventBind extends Component {
                 {/* <button onClick={this.handleClick.bind(this)}>Click</button> */}
                 {/* <button onClick={() => this.handleClick()}>Click</button> */}
                 {/* <button onClick={this.handleClick}>Click</button> */}
-                <button onClick={this.handleClick2}>Click</button>
+                {/* <button onClick={this.handleClick2}>Click</button> */}
+                <button onClick={() => this.handleClick3("Joe")}>Click</button>
             </div>
         );
     }

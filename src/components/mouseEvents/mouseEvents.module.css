@@ -1,0 +1,27 @@
+.mouse-event {
+    text-align: center;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.list li {
+    padding: 1rem 2rem;
+    background-color: beige;
+    /* display: inline-block; */
+    margin: 0;
+    width: 20rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.list li span {
+    color: red;
+}

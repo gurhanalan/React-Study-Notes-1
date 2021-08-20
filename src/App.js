@@ -8,6 +8,7 @@ import "./app.css";
 import styles from "./app.module.css";
 import ModuleBtn from "./components/moduleCss/ModuleBtn";
 import EventBind from "./components/eventBinding/EventBind";
+import MouseEvents from "./components/mouseEvents/MouseEvents";
 
 function App() {
     return (
@@ -30,6 +31,8 @@ function App() {
 
             <h1>Events in React</h1>
             <EventBind />
+
+            <MouseEvents />
         </div>
     );
 }

@@ -1,0 +1,38 @@
+.form {
+    display: flex;
+    max-width: 40rem;
+    margin: 2rem auto 0;
+    padding: 2rem 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: beige;
+}
+
+.form label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    gap: 0.5rem;
+    font-weight: bold;
+}
+
+.form label > input {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+}
+.form label > select {
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+}
+
+.form button {
+    color: white;
+    background-color: darkgrey;
+    padding: 1rem 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.6rem;
+}

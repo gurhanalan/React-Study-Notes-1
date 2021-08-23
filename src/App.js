@@ -10,6 +10,7 @@ import ModuleBtn from "./components/moduleCss/ModuleBtn";
 import EventBind from "./components/eventBinding/EventBind";
 import MouseEvents from "./components/mouseEvents/MouseEvents";
 import KeyboardEvents from "./components/keyboardEvents/KeyboardEvents";
+import Form from "./components/form/Form";
 
 function App() {
     return (
@@ -36,6 +37,8 @@ function App() {
             <MouseEvents />
 
             <KeyboardEvents />
+
+            <Form />
         </div>
     );
 }

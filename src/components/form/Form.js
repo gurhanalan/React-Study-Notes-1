@@ -1,6 +1,8 @@
 import styles from "./form.module.css";
 import { useState } from "react";
 
+import { setInput } from "../../helpers/inputHelpers";
+
 const Form = () => {
     // State Hooks
     const [name, setName] = useState("");
@@ -11,8 +13,8 @@ const Form = () => {
     console.log({ name, email, pass, country });
 
     // Functions for Fields
-    const handleNameField = (e) => setName(e.target.value);
-    const handleEmailField = (e) => setEmail(e.target.value);
+    // const handleNameField = (e) => setName(e.target.value);
+    // const handleEmailField = (e) => setEmail(e.target.value);
     const handlePassField = (e) => setPass(e.target.value);
     const handleCountryField = (e) => setCountry(e.target.value);
 
@@ -39,7 +41,7 @@ const Form = () => {
                         type="text"
                         placeholder="name"
                         value={name}
-                        onChange={handleNameField}
+                        onChange={setInput(setName)}
                     />
                 </label>
 
@@ -49,7 +51,7 @@ const Form = () => {
                         type="email"
                         placeholder="email"
                         value={email}
-                        onChange={handleEmailField}
+                        onChange={setInput(setEmail)}
                     />
                 </label>
                 <label>

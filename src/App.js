@@ -11,6 +11,7 @@ import EventBind from "./components/eventBinding/EventBind";
 import MouseEvents from "./components/mouseEvents/MouseEvents";
 import KeyboardEvents from "./components/keyboardEvents/KeyboardEvents";
 import Form from "./components/form/Form";
+import Counter from "./components/compLifeCycle/Counter";
 
 function App() {
     return (
@@ -39,6 +40,8 @@ function App() {
             <KeyboardEvents />
 
             <Form />
+
+            <Counter name="Apples" />
         </div>
     );
 }

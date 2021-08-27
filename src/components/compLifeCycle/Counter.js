@@ -4,8 +4,15 @@ import styles from "./counter.module.scss";
 class Counter extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { counter: "0" };
+        this.state = { counter: 0 };
     }
+
+    countUp = () => {
+        this.setState({ counter: this.state.counter + 1 });
+    };
+    countDown = () => {
+        this.setState({ counter: this.state.counter - 1 });
+    };
 
     render() {
         return (
@@ -14,8 +21,8 @@ class Counter extends React.Component {
 
                 <p>Counter of {this.props.name}</p>
                 <p>Counter : {this.state.counter}</p>
-                <button>Count Down</button>
-                <button>Count Up</button>
+                <button onClick={this.countDown}>Count Down</button>
+                <button onClick={this.countUp}>Count Up</button>
             </div>
         );
     }

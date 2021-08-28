@@ -5,6 +5,7 @@ class Counter extends React.Component {
     constructor(props) {
         super(props);
         this.state = { counter: 0 };
+        console.log("Constructor");
     }
 
     countUp = () => {
@@ -14,7 +15,34 @@ class Counter extends React.Component {
         this.setState({ counter: this.state.counter - 1 });
     };
 
+    static getDerivedStateFromProps(props, state) {
+        console.log("getDerievedStatesFromProps", props, state);
+        return null;
+    }
+
+    shouldComponentUpdate = () => {
+        console.log("Should component update");
+        return true;
+    };
+    componentDidMount = () => {
+        console.log("Component Mounted");
+        console.log("--------------------");
+    };
+
+    getSnapshotBeforeUpdate = (prevprops, prevstate) => {
+        console.log("snapshot", prevprops, prevstate);
+        return null;
+    };
+
+    componentDidUpdate = () => {
+        console.log("Component did update");
+    };
+
+    componentWillUnmount() {
+        console.log("Component will unmount, bye bye");
+    }
     render() {
+        console.log("Render");
         return (
             <div className={styles.container}>
                 <h1> Comp Life Cycle </h1>

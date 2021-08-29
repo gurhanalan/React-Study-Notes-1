@@ -1,3 +1,4 @@
+import react, { useState } from "react";
 import ClassComponent from "./components/ClassComponent";
 import TitleFunctionalComp from "./components/FunctionalComponent";
 import StyleInlineCss from "./components/InlineCSS/StyleInlineCss";
@@ -14,6 +15,8 @@ import Form from "./components/form/Form";
 import Counter from "./components/compLifeCycle/Counter";
 
 function App() {
+    const [showCounter1, setShowCounter1] = useState(true);
+
     return (
         <div>
             <ClassComponent name="Jane Doe" />
@@ -40,8 +43,10 @@ function App() {
             <KeyboardEvents />
 
             <Form />
-
-            <Counter name="Apples" />
+            <button onClick={() => setShowCounter1(!showCounter1)}>
+                Show Counter 1 Toggle
+            </button>
+            {showCounter1 && <Counter name="Apples" />}
         </div>
     );
 }

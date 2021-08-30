@@ -1,4 +1,4 @@
-import react, { useState } from "react";
+import { useState } from "react";
 import ClassComponent from "./components/ClassComponent";
 import TitleFunctionalComp from "./components/FunctionalComponent";
 import StyleInlineCss from "./components/InlineCSS/StyleInlineCss";
@@ -13,6 +13,7 @@ import MouseEvents from "./components/mouseEvents/MouseEvents";
 import KeyboardEvents from "./components/keyboardEvents/KeyboardEvents";
 import Form from "./components/form/Form";
 import Counter from "./components/compLifeCycle/Counter";
+import CounterFunctComp from "./components/hooks/CounterFunctComp";
 
 function App() {
     const [showCounter1, setShowCounter1] = useState(true);
@@ -43,10 +44,23 @@ function App() {
             <KeyboardEvents />
 
             <Form />
-            <button onClick={() => setShowCounter1(!showCounter1)}>
+            <button
+                onClick={() => setShowCounter1(!showCounter1)}
+                style={{
+                    color: "red",
+                    fontSize: "1.2rem",
+                    fontWeight: "bold",
+                    backgroundColor: "teal",
+                    display: "block",
+                    margin: "2rem auto",
+                    padding: "1rem 2rem",
+                }}
+            >
                 Show Counter 1 Toggle
             </button>
             {showCounter1 && <Counter name="Apples" />}
+
+            <CounterFunctComp name="Oranges" />
         </div>
     );
 }

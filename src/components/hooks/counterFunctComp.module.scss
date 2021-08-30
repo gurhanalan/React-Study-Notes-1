@@ -1,0 +1,29 @@
+.container {
+    text-align: center;
+
+    p {
+        font-size: 1.3rem;
+    }
+
+    h1 {
+        color: rgb(43, 55, 226);
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    button {
+        background-color: rgb(40, 168, 46);
+        padding: 0.5rem 1rem;
+        margin: 0 0.5rem;
+        border: none;
+        color: rgb(43, 55, 226);
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+}

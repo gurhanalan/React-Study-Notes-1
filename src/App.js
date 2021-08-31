@@ -17,6 +17,7 @@ import CounterFunctComp from "./components/hooks/CounterFunctComp";
 
 function App() {
     const [showCounter1, setShowCounter1] = useState(true);
+    const [showCounter2, setShowCounter2] = useState(true);
 
     return (
         <div>
@@ -60,7 +61,21 @@ function App() {
             </button>
             {showCounter1 && <Counter name="Apples" />}
 
-            <CounterFunctComp name="Oranges" />
+            <button
+                onClick={() => setShowCounter2(!showCounter2)}
+                style={{
+                    color: "red",
+                    fontSize: "1.2rem",
+                    fontWeight: "bold",
+                    backgroundColor: "teal",
+                    display: "block",
+                    margin: "2rem auto",
+                    padding: "1rem 2rem",
+                }}
+            >
+                Show Counter 2 Toggle
+            </button>
+            {showCounter2 && <CounterFunctComp name="Oranges" />}
         </div>
     );
 }

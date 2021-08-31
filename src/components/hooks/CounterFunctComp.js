@@ -1,8 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./counterFunctComp.module.scss";
 
 function CounterFunctComp({ name }) {
     const [counter, setCounter] = useState(0);
+
+    useEffect(() => {
+        console.log("This only works when function loads");
+        return () => {
+            console.log("This shows right before unmount of funt comp");
+        };
+    }, []);
+    useEffect(() => {
+        console.log("This only works when counter state updates");
+    }, [counter]);
+
     return (
         <div className={styles.container}>
             <h1> Functional Comp with Hooks </h1>

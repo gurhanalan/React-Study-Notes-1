@@ -8,6 +8,8 @@ class Counter extends React.Component {
         console.log("Constructor");
     }
 
+    // state = {counter : 0}
+
     countUp = () => {
         this.setState({ counter: this.state.counter + 1 });
     };
